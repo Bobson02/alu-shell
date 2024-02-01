@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod --reference= olleh hello
+chmod --reference=$(stat -c %a source.txt) destination.txt
