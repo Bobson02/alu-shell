@@ -1,2 +1,2 @@
 #!/bin/bash
-rsync --perms --chmod=ugo=rwX olleh hello
+chmod --reference=olleh hello
