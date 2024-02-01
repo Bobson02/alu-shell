@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod --reference=$(stat -c %a olleh) hello
+rsync --perms --chmod=ugo=rwX olleh hello
