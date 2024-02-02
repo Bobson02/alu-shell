@@ -1,2 +1,2 @@
 #!/bin/bash
-for file in * do read -r line read -r _ read; echo "$line" done < <(ls)
+for file in * do read -r line read -r _ read echo "$line" done < <(ls)
