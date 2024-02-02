@@ -1,2 +1,2 @@
 #!/bin/bash
-awk 'NR%2==1' <<< "Line 1\nLine 2\nLine 3\nLine 4\nLine 5\n"
+sed -n '1~2p' <<< "Line 1\nLine 2\nLine 3\nLine 4\nLine 5\n"
