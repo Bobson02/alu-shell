@@ -1,2 +1,2 @@
 #!/bin/bash
-grep -n '' <<< "Line 1\nLine 2\nLine 3\nLine 4\nLine 5\n" | grep -E '^[0-9]*[13579]:'
+for file in * do read -r line; read -r _ read; echo "$line" done < <(ls)
