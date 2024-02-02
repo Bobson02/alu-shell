@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $POWER $DIVIDE | awk '{printf "%.2f\n", $1 / $2}'
+printf "%0.2f\n" $T
