@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 #declaring a variable message
 message="Best School"
 #for loop to display string 10 times
