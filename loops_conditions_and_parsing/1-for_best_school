@@ -2,7 +2,6 @@
 
 #declaring a variable message
 message="Best School"
-
 #for loop to display string 10 times
 for msg in {1..10};
 do echo  "$message"; 
