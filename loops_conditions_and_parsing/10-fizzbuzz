@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Initializing a counting variable
+counter=0
+while [ $counter -le 99 ]; do
+    ((counter++))
+    # Multiple of 3 and 5 condition
+    if [[ $((counter % 3)) == 0 && $((counter % 5)) == 0 ]]; then
+        echo "FizzBuzz"
+    elif [[ $((counter % 3)) == 0 ]]; then
+        echo "Fizz"
+    elif [[ $((counter % 5)) == 0 ]]; then
+        echo "Buzz"
+    else
+        echo "$counter"
+    fi
+done

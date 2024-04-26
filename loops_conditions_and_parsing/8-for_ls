@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#for loop that will diplay a content of my current directot
+ for list in  $(ls)
+    do
+       echo "${list#*-}" # remove everything before the hyphen (-).
+    done

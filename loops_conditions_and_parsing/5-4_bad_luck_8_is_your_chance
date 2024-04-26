@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# #counting variable 
+counter=0
+
+#looping  through the echo statements except some 
+while [ $counter -le 9 ]
+do
+# Establishing a counter condition to add number to the iteration
+  ((counter++))
+  #using if condition to display other messages  based on the value of $counter
+   if [[ $counter == 4 ]]; then
+     echo "bad luck" 
+   elif [[ $counter == 8 ]]; then
+     echo "good luck"
+   else 
+     echo "Best School"
+   fi
+done 
+#end of bash scripting 

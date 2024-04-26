@@ -1,0 +1,16 @@
+#!/usr/bin/env bash#!/bin/bash
+
+# Counter variable
+count=0
+
+# Loop until count is 10
+until [ $count -eq 10 ]
+do
+    echo "Best School"
+    # Increment the counter
+    ((count+=1))
+    if  [[ $count == 9 ]]
+    then    
+     echo "Hi"
+    fi
+done

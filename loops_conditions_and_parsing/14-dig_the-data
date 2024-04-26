@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Path to the Apache log file
+apache_log="/var/log/apache2/access.log"
+
+# Group visitors by IP and HTTP status code, count occurrences, and format the output
+awk '{ count[$1" "$9]++ } END { for (key in count) print count[key], key }' "$apache_log" | sort -rn

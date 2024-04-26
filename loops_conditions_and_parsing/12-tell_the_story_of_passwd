@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Assigning file name to the variable
+passwd_file="/etc/passwd"
+# While loop to iterate through each line in passwd.txt file
+while IFS=: read -r username password uid gid info ccc shell ; do
+    echo "The user $username is part of the gang $gid, lives in $home and rides $home .$uid's place is protected by the passcode , more info about the user here:$info INFO"
+done < "$passwd_file"

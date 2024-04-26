@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# #counting variable
+counter_one=0
+#looping condition to create a sequence of numbers
+while [ $counter_one -le 12 ]
+    do  
+        counter_two=0 
+        echo "Hour: $counter_one"   #prints the value of counter 
+        let "counter_one++"
+            while [ $counter_two -le 58 ]
+             do
+             let "counter_two++"
+              echo "$counter_two"
+        done
+    
+done
