@@ -43,7 +43,7 @@ restart_process() {
     # Start the process again
     start_process
     
-    # Display a message indicating the process has restarted
+    
     echo "manage_my_process restarted"
 }
 
