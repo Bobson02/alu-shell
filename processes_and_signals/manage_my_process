@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Function to write "I am alive!" to the file /tmp/my_process
+write_to_file() {
+    echo "I am alive!" >> /tmp/my_process
+}
+
+# Infinite loop to write to the file
+while true; do
+    write_to_file
+    sleep 2
+done

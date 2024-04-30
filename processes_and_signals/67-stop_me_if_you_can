@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Set the maximum number of iterations
+max_iterations=10
+counter=0
+# Loop until the counter reaches the maximum number of iterations
+while [ $counter -lt $max_iterations ]; do
+    echo "To infinity and beyond"
+    sleep 2
+    ((counter++))
+    if [ $counter -eq 7 ]; then
+        echo -n "terminated"
+        break
+    fi
+done
