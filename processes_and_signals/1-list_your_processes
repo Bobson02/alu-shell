@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
-# Display headers
-echo "USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND"
-# Display process hierarchy
-ps axjf | awk '{printf "%-10s %7d %4.1f %4.1f %6s %6s %-8s %3s %7s %7s ", $8, $2, $3, $4, $5, $6, $7, $10, $11, $12; for (i=13; i<=NF; i++) {printf "%s ", $i}; printf "\n"}'
+# -a: Shows processes from all users
+# -u: Displays additional information about each process
+# including the username of the processes
+# -x: Includes processes that do not have a controllingg terminal (TTY)
+# -f: Provides a full-format listing displaying additional information
+# such as the user asociated with each process
+#and the command used to start the process
+
+ps -auxf

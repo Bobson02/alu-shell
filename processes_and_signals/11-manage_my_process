@@ -34,19 +34,14 @@ stop_process() {
         echo "PID file not found. manage_my_process is not running."
     fi
 }
-
 # Function to restart the manage_my_process script
 restart_process() {
     # Stop the process if it is running
     stop_process
-    
     # Start the process again
     start_process
-    
-    
     echo "manage_my_process restarted"
 }
-
 # Main function to handle command line arguments
 main() {
     case "$1" in

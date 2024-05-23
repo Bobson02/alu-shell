@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
+#Bash script that displays lines containing the bash word
 # shellcheck disable=SC2009
 
-# Display lines containing the word "bash" and filter out the current script itself
-ps axjf | awk '/bash/ && !/awk/ {print}'
+ps -aux | grep bash

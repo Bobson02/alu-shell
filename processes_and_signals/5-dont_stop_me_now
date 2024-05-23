@@ -1,12 +1,3 @@
 #!/usr/bin/env bash
-# Set the maximum number of iterations
-max_iterations=14
-counter=0
-# Loop until the counter reaches the maximum number of iterations
-while [ $counter -lt $max_iterations ]; do
-    echo "To infinity and beyond"
-    sleep 2
-    ((counter++))
-done
-# Send the TERM signal to stop the loop
-kill -TERM $$
+# Write a Bash script that stops 4-to_infinity_and_beyond process.
+kill "$(pgrep -f 4-to_infinity_and_beyond)"

@@ -1,15 +1,4 @@
 #!/usr/bin/env bash
-# Define the process name to be killed
-process_name="7-highlander"
+# kill "7-highlander" process
 
-# Get the PID of the process
-pid=$(pgrep -f "$process_name")
-
-# Check if the process exists
-if [ -z "$pid" ]; then
-    echo "Process '$process_name' not found."
-    exit 1
-fi
-
-# Send the TERM signal to terminate the process
-kill -TERM "$pid"
+pkill -f -SIGKILL 7-highlander

@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
-# Get the PID and process name from the /proc filesystem
-for pid_dir in /proc/*/; do
-    pid=$(basename "$pid_dir")
-    name=$(tr '\0' ' ' < "$pid_dir/cmdline" | grep -o '\b[bB]ash\b')
-    if [ -n "$name" ]; then
-        echo "$pid $name"
-    fi
-done
+# Bash script
+# displays the PID with process name, of processes 
+# whose name contain the word bash.
+pgrep -l bash
