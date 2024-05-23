@@ -1,2 +1,8 @@
 #!/bin/bash
-printf "%d\n" "$((WATER + STIR))"
+water="$WATER"
+stir="$STIR"
+water_dec=$(echo "ibase=water; $water" | bc)
+stir_dec=$(echo "ibase=stir; $stir" | bc)
+result_dec=$((water_dec + stir_dec))
+result_bestchol=$(echo "obase=bestchol; $result_dec" | bc)
+echo "$result_bestchol"
