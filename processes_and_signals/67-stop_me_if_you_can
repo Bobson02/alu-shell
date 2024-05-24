@@ -1,14 +1,4 @@
 #!/usr/bin/env bash
-
-max_iterations=10
-counter=0
-
-while [ $counter -lt $max_iterations ]; do
-    echo "To infinity and beyond"
-    sleep 2
-    ((counter++))
-    if [ $counter -eq 7 ]; then
-        echo -n "terminated"
-        break
-    fi
-done
+#Bash script that stops 4-to_infinity_and_beyond process.
+#cannot use kill or killall
+pkill -f 7-highlander

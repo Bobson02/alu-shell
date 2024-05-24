@@ -1,64 +1,7 @@
 #!/usr/bin/env bash
-# Define the PID file path
-pid_file="/var/run/my_process.pid"
-
-# Function to start the manage_my_process script
-start_process() {
-    # Start the process in the background and capture its PID
-    ./manage_my_process.sh &
-    pid=$!
-    
-    # Write the PID to the PID file
-    echo "$pid" > "$pid_file"
-    
-    # Display a message indicating the process has started
-    echo "manage_my_process started"
-}
-
-# Function to stop the manage_my_process script
-stop_process() {
-    # Check if the PID file exists
-    if [ -f "$pid_file" ]; then
-        # Read the PID from the PID file
-        pid=$(cat "$pid_file")
-        
-        # Kill the process using its PID
-        kill "$pid"
-        
-        # Delete the PID file
-        rm -f "$pid_file"
-        
-        # Display a message indicating the process has stopped
-        echo "manage_my_process stopped"
-    else
-        echo "PID file not found. manage_my_process is not running."
-    fi
-}
-# Function to restart the manage_my_process script
-restart_process() {
-    # Stop the process if it is running
-    stop_process
-    # Start the process again
-    start_process
-    echo "manage_my_process restarted"
-}
-# Main function to handle command line arguments
-main() {
-    case "$1" in
-        start)
-            start_process
-            ;;
-        stop)
-            stop_process
-            ;;
-        restart)
-            restart_process
-            ;;
-        *)
-            echo "Usage: $0 {start|stop|restart}"
-            ;;
-    esac
-}
-
-# Execute the main function with the provided arguments
-main "$@"
+#Bash (init) script that manages manage_my_process
+while true
+do
+    sudo bash -c 'echo "I am alive!" >> /tmp/my_process'
+    sleep 2
+done
