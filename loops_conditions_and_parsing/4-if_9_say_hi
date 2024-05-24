@@ -1,16 +1,13 @@
-#!/usr/bin/env bash#!/bin/bash
-
-# Counter variable
-count=0
-
-# Loop until count is 10
-until [ $count -eq 10 ]
+#!/usr/bin/env bash
+# This script is displaying "Best School" 10 times
+counter=0
+while [ $counter -lt 10 ] 
 do
-    echo "Best School"
-    # Increment the counter
-    ((count+=1))
-    if  [[ $count == 9 ]]
-    then    
-     echo "Hi"
-    fi
+	if [ $counter -eq 9 ]
+	then
+		echo "Hi"
+	fi
+	echo "Best School"
+	
+	(( counter++ ))
 done
