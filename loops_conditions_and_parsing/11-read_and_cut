@@ -4,6 +4,9 @@ passwd_file="/etc/passwd"
 
 # Use a while loop to read each line of the passwd file
 while IFS=: read -r username password uid gid info home shell; do
+    # Suppress ShellCheck warnings for unused variables
+    : "${password:?}" "${gid:?}" "${info:?}" "${shell:?}"
+    
     # Display username, user ID, and home directory path
     echo "$username:$uid:$home"
 done < "$passwd_file"
